@@ -29,6 +29,9 @@ const options = {
   key: fs.readFileSync('./keys/key.pem') 
 }
 
-https.createServer(options, server).listen(process.env.PORT || 8080, () => {
-  console.log('JSON Server is running https://localhost:3001')
+
+const port = process.env.PORT || 3001;
+
+https.createServer(options, server).listen(port, () => {
+  console.log('\n\n' + 'Node Server OK... ' );
 })
