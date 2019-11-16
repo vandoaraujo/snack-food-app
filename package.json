@@ -2,10 +2,10 @@
   "name": "meat-api",
   "version": "1.0.0",
   "description": "API de restaurantes",
-  "main": "server .js",
+  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "e2e": "protractor"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +17,10 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "fs-extra": "^6.0.1",
-    "json-server": "0.12.0",
+    "json-server": "^0.15.1",
     "jsonwebtoken": "7.4.1"
   },
   "engines": {
-    "node": "10.15.3"
+    "node": "10.x"
   }
 }
