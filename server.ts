@@ -32,6 +32,6 @@ const options = {
 
 const port = process.env.PORT || 3001;
 
-https.createServer(options, server).listen(port, () => {
+https.createServer(server).listen(port, () => {
   console.log('\n\n' + 'Node Server OK... ' );
 })
