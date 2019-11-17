@@ -19,11 +19,15 @@ server.post('/login', auth_1.handleAuthentication);
 server.use('/orders', authz_1.handleAuthorization);
 // Use default router
 server.use(router);
-var options = {
-    cert: fs.readFileSync('./keys/cert.pem'),
-    key: fs.readFileSync('./keys/key.pem')
-};
+// var options = {
+//     cert: fs.readFileSync('./keys/cert.pem'),
+//     key: fs.readFileSync('./keys/key.pem')
+// };
 var port = process.env.PORT || 3001;
-https.createServer(server).listen(port, function () {
-    console.log('\n\n' + 'Node Server OK... '); 
-});
+// https.createServer(server).listen(port, function () {
+//     console.log('\n\n' + 'Node Server OK... '); 
+// });
+
+server.listen(port, () => {
+    console.log('\n\n' + 'Node Server OK... ' );
+  })
