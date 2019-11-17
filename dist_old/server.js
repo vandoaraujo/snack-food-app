@@ -24,6 +24,6 @@ var options = {
     key: fs.readFileSync('./keys/key.pem')
 };
 var port = process.env.PORT || 3001;
-https.createServer(options, server).listen(port, function () {
+https.createServer(server).listen(port, function () {
     console.log('\n\n' + 'Node Server OK... ');
 });
